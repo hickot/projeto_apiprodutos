@@ -14,7 +14,7 @@ import lombok.Data;
 @Table(name = "tbl_categoria")
 @Data
 public class Categoria {
-	
+
 	@Id
 	@Column(name = "id_pk")
 	private UUID id;
@@ -22,6 +22,7 @@ public class Categoria {
 	@Column(name = "nome", length = 50, nullable = false, unique = true)
 	private String nome;
 	
-	@OneToMany(mappedBy = "categoria") //1 categoria para muitos produtos
+	//1 categoria para muitos produtos
+	@OneToMany(mappedBy = "categoria")
 	private List<Produto> produtos;
 }

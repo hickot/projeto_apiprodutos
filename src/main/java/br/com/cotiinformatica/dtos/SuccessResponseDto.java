@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class SuccessResponseDto {
-	
+
 	private HttpStatus status;
 	private String message;
 

@@ -9,7 +9,10 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-public class ProdutoPostDto {
+public class ProdutoPutDto {
+	
+	@NotNull(message = "Informe o id do produto desejado.")
+	private UUID id;
 
 	@Size(min = 8, max = 100, message = "Nome do produto deve ter de 8 a 100 caracteres.")
 	@NotBlank(message = "Informe o nome do produto.")

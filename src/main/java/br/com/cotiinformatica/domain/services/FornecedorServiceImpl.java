@@ -14,12 +14,10 @@ public class FornecedorServiceImpl implements FornecedorService {
 
 	@Autowired
 	FornecedorRepository fornecedorRepository;
-	
+
 	@Override
 	public List<Fornecedor> findAll() throws Exception {
-		
-		//consultar todos os fornecedores cadastrados
+		// Consultar todos os fornecedores cadastrados na base de dados
 		return (List<Fornecedor>) fornecedorRepository.findAll();
-	}
-
+	}	
 }
